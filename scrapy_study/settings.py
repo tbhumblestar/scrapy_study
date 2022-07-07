@@ -17,7 +17,8 @@ NEWSPIDER_MODULE = 'scrapy_study.spiders'
 #USER_AGENT = 'scrapy_study (+http://www.yourdomain.com)'
 
 # Obey robots.txt rules
-ROBOTSTXT_OBEY = True
+# openapi를 위해 사용하는 설정
+ROBOTSTXT_OBEY = False
 
 #JSON을 위한 인코딩
 FEED_EXPORT_ENCODING ='utf-8'
@@ -69,7 +70,7 @@ DUPEFILTER_CLASS = 'scrapy.dupefilters.BaseDupeFilter'
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-   'scrapy_study.pipelines.ScrapyStudyPipeline': 300,
+#    'scrapy_study.pipelines.ScrapyStudyPipeline': 300,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

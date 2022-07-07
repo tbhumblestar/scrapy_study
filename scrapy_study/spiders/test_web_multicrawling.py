@@ -4,7 +4,7 @@ from scrapy_study.items import ScrapyStudyItem
 class TestWebMulticrawlingSpider(scrapy.Spider):
     name = 'test_web_multicrawling'
     allowed_domains = ['davelee-fun.github.io']
-    start_urls = ['http://davelee-fun.github.io/']
+    # start_urls = ['http://davelee-fun.github.io/']
 
     def start_requests(self):
         #1페이지 
