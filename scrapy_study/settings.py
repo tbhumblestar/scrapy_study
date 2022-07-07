@@ -22,6 +22,9 @@ ROBOTSTXT_OBEY = True
 #JSON을 위한 인코딩
 FEED_EXPORT_ENCODING ='utf-8'
 
+#for multi_crwaling
+DUPEFILTER_CLASS = 'scrapy.dupefilters.BaseDupeFilter'
+
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 #CONCURRENT_REQUESTS = 32
 
