@@ -1,13 +1,9 @@
-# Define your item pipelines here
-#
-# Don't forget to add your pipeline to the ITEM_PIPELINES setting
-# See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-
-
-# useful for handling different item types with a single interface
+from scrapy.exceptions import DropItem
 from itemadapter import ItemAdapter
-
 
 class ScrapyStudyPipeline:
     def process_item(self, item, spider):
-        return item
+        if '행거' in item['recent_products_titles']:
+            raise DropItem('행거관련 아이템 제거')
+        else:            
+            return item
